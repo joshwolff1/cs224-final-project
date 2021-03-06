@@ -1,7 +1,7 @@
 from mendeleev import element
 import numpy as np
 
-N_ELS = 119
+N_ELS = 118
 ELEMENTS = [
     'H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne',
     'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar',
@@ -21,7 +21,7 @@ ELEMENTS = [
 
 
 def symbol_to_one_hot(symbols):
-    eltonum = lambda x : element(str(x)).atomic_number
+    eltonum = lambda x : element(str(x)).atomic_number - 1
     symbols = map(eltonum, symbols)
     symbols = list(symbols)
     symbol_len = len(symbols)
